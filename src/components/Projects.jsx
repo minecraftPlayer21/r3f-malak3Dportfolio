@@ -9,10 +9,10 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Wawatmos",
-    url: "https://r3f-wawatmos-final.vercel.app/",
-    image: "projects/wawatmos.jpg",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
+    title: "UTEK Webmaster",
+    url: "https://utek.skule.ca/",
+    image: "projects/utek.png",
+    description: "Redesigned UTEK's website as Webmaster, focusing on responsive design and seamless navigation.",
   },
   {
     title: "Portfolio Baking",
