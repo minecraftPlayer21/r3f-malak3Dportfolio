@@ -86,7 +86,7 @@ const AboutSection = (props) => {
           delay: 2,
         }}
       >
-        Explore Me
+        Click Here!
       </motion.button>
     </Section>
   );

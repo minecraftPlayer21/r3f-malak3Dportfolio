@@ -9,15 +9,15 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "UTEK Webmaster",
-    url: "https://utek.skule.ca/",
-    image: "projects/utek.png",
-    description: "Redesigned UTEK's website as Webmaster, focusing on responsive design and seamless navigation.",
+    title: "GestureInk",
+    url: "https://github.com/minecraftPlayer21/Hand-Movement-Controllled-Projet.git",
+    image: "projects/gestureink.png",
+    description: "AI-powered, no-touch hand gesture writing & drawing system.",
   },
   {
-    title: "Portfolio Baking",
+    title: "AI Hand Gesture Destection",
     url: "",
-    image: "projects/baking.jpg",
+    image: "projects/tictactoe.png",
     description: "Learn how to bake a 3D model with Blender and use it in r3f",
   },
   {
