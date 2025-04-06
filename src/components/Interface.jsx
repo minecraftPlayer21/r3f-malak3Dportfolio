@@ -67,8 +67,8 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I am a second-year ECE student
-        <br />I learn how to build 3D apps!
+        I an ECE student
+        <br />I build stuff for fun!
       </motion.p>
       <motion.button
         onClick={() => window.open("https://aboutme-mk.netlify.app/", "_blank")}
