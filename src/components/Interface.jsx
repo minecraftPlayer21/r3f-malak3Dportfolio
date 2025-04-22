@@ -45,53 +45,46 @@ export const Interface = (props) => {
 
 const AboutSection = (props) => {
   const { setSection } = props;
+
   return (
     <Section mobileTop>
-      <h1 className="about-title">
-        Hi, I'm
-        <br />
-        <span className="about-name">Malak Khalifa</span>
-      </h1>
-      <motion.p
-        className="about-description"
-        initial={{
-          opacity: 0,
-          y: 25,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-          delay: 1.5,
-        }}
-      >
-        I an ECE student
-        <br />I build stuff for fun!
-      </motion.p>
-      <motion.button
-        onClick={() => window.open("https://aboutme-mk.netlify.app/", "_blank")}
-        className="explore-button"
-        initial={{
-          opacity: 0,
-          y: 25,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-          delay: 2,
-        }}
-      >
-        Click Here!
-      </motion.button>
+      <div className="flex flex-col items-center text-center px-6">
+        <motion.h1
+          className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Hi, I'm <br />
+          <span className="text-indigo-400">Malak Khalifa</span>
+        </motion.h1>
+
+        <motion.div
+          className="bg-black/30 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 max-w-2xl w-full"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <p className="text-lg md:text-2xl text-gray-200 leading-relaxed">
+            I am an ECE student passionate about technology, creativity, and building fun projects!
+          </p>
+        </motion.div>
+
+        <motion.button
+          onClick={() => window.open("https://aboutme-mk.netlify.app/", "_blank")}
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-8 rounded-2xl shadow-lg transition-all duration-300"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Explore More
+        </motion.button>
+      </div>
     </Section>
   );
 };
 
+/*
 const skills = [
   {
     title: "Threejs / React Three Fiber",
@@ -128,99 +121,45 @@ const languages = [
     level: 20,
   },
 ];
+*/
 
 const SkillsSection = () => {
   return (
     <Section>
       <motion.div className="w-full" whileInView={"visible"}>
-        <h2 className="text-3xl md:text-5xl font-bold text-white">Skills</h2>
-        <div className="mt-8 space-y-4">
-          {skills.map((skill, index) => (
-            <div className="w-full md:w-64" key={index}>
-              <motion.h3
-                className="text-lg md:text-xl font-bold text-gray-100"
-                initial={{
-                  opacity: 0,
-                }}
-                variants={{
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      delay: 1 + index * 0.2,
-                    },
-                  },
-                }}
-              >
-                {skill.title}
-              </motion.h3>
-              <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                <motion.div
-                  className="h-full bg-indigo-500 rounded-full "
-                  style={{ width: `${skill.level}%` }}
-                  initial={{
-                    scaleX: 0,
-                    originX: 0,
-                  }}
-                  variants={{
-                    visible: {
-                      scaleX: 1,
-                      transition: {
-                        duration: 1,
-                        delay: 1 + index * 0.2,
-                      },
-                    },
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div>
-          <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">
-            Languages
-          </h2>
-          <div className="mt-8 space-y-4">
-            {languages.map((lng, index) => (
-              <div className="w-full md:w-64" key={index}>
-                <motion.h3
-                  className="text-lg md:text-xl font-bold text-gray-100"
-                  initial={{
-                    opacity: 0,
-                  }}
-                  variants={{
-                    visible: {
-                      opacity: 1,
-                      transition: {
-                        duration: 1,
-                        delay: 2 + index * 0.2,
-                      },
-                    },
-                  }}
-                >
-                  {lng.title}
-                </motion.h3>
-                <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                  <motion.div
-                    className="h-full bg-indigo-500 rounded-full "
-                    style={{ width: `${lng.level}%` }}
-                    initial={{
-                      scaleX: 0,
-                      originX: 0,
-                    }}
-                    variants={{
-                      visible: {
-                        scaleX: 1,
-                        transition: {
-                          duration: 1,
-                          delay: 2 + index * 0.2,
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
+        <h2 className="text-4xl md:text-6xl font-extrabold text-center text-white mb-12 tracking-tight">
+          Skills
+        </h2>
+
+        <div className="grid gap-12 md:grid-cols-2 text-gray-100 text-lg md:text-xl max-w-6xl mx-auto px-4">
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">Languages</h3>
+            <p className="leading-relaxed">Java, JavaScript, Python, HTML5, CSS, TypeScript, C++, C, MATLAB</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">Tools & Frameworks</h3>
+            <p className="leading-relaxed">React, Angular, Node.js, TensorFlow, MongoDB, Express, Git</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">3D & Interactive Development</h3>
+            <p className="leading-relaxed">React Three Fiber, Blender, Three.js, 3D Portfolio Development</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">AI & Computer Vision</h3>
+            <p className="leading-relaxed">OpenCV, cvzone, NumPy, MQTT, Hand Gesture Detection, Gesture-Controlled Interfaces</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">IoT & Embedded Systems</h3>
+            <p className="leading-relaxed">ESP32/ESP8266, Arduino, Arduino IDE, MQTT Communication</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-indigo-300 text-2xl mb-3">Other</h3>
+            <p className="leading-relaxed">Frontend | Backend | Full-Stack | English, French, Arabic – Professional Proficiency or Above</p>
           </div>
         </div>
       </motion.div>
