@@ -36,21 +36,26 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection} />
+      {/*
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
+      */}
     </div>
   );
 };
+
+
 
 const AboutSection = (props) => {
   const { setSection } = props;
 
   return (
     <Section mobileTop>
-      <div className="flex flex-col items-center text-center px-6">
+      <div className="flex flex-col items-center text-center px-4 sm:px-6 md:px-8 gap-y-6 md:gap-y-10">
+        
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-tight"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -60,25 +65,26 @@ const AboutSection = (props) => {
         </motion.h1>
 
         <motion.div
-          className="bg-black/30 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 max-w-2xl w-full"
+          className="bg-black/30 backdrop-blur-sm rounded-2xl px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 max-w-xl w-full"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <p className="text-lg md:text-2xl text-gray-200 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-2xl text-gray-200 leading-relaxed">
             I am an ECE student passionate about technology, creativity, and building fun projects!
           </p>
         </motion.div>
 
         <motion.button
           onClick={() => window.open("https://aboutme-mk.netlify.app/", "_blank")}
-          className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-8 rounded-2xl shadow-lg transition-all duration-300"
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 sm:px-8 rounded-2xl shadow-lg transition-all duration-300 mt-4 md:mt-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
           Explore More
         </motion.button>
+
       </div>
     </Section>
   );
@@ -123,6 +129,8 @@ const languages = [
 ];
 */
 
+/*
+
 const SkillsSection = () => {
   return (
     <Section>
@@ -166,7 +174,7 @@ const SkillsSection = () => {
     </Section>
   );
 };
-
+*/
 /*
 const SkillsSection = () => {
   return (
